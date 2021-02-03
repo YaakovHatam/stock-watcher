@@ -35,8 +35,6 @@ function WatchlistModal(props) {
     );
 }
 
-
-
 WatchlistModal.propTypes = {
     show: PropTypes.bool.isRequired,
     body: PropTypes.element.isRequired,
