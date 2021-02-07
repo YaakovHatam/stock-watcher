@@ -9,7 +9,15 @@ import {
   addStockToWatchlistAction,
 } from "./../redux/actions";
 
+const CHECKBOXES_CHECKED = 3;
+
 function StockItem(props) {
+	 useEffect(() => {
+    if (props.watchlist.length > CHECKBOXES_CHECKED) {
+      props.removeStockFromWatchlistAction(props.watchlist["symbol"]);
+    }
+  }, [props.watchlist]);
+	 
   const toggleWatchlistStock = (e) => {
     props[
       !e.target.checked

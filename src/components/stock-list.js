@@ -33,7 +33,6 @@ function StockList(props) {
 
   const onModalClose = (stockSymbol) => {
     if (stockSymbol === "close") {
-      props.removeStockFromWatchlistAction(stockSymbol);
       setModalShow(false);
       return;
     }
